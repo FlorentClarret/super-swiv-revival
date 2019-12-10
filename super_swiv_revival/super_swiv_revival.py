@@ -1,5 +1,8 @@
 import pygame
 
+from enums.direction import Direction
+from player.car import Car
+
 FPS = 30
 SCREEN_WIDTH = 512
 SCREEN_HEIGHT = 448
@@ -15,6 +18,11 @@ def main():
 
     clock = pygame.time.Clock()
 
+    all_sprites_group = pygame.sprite.Group()
+
+    car = Car(SCREEN_WIDTH, SCREEN_HEIGHT)
+    all_sprites_group.add(car)
+
     while True:
         clock.tick(FPS)
         screen.blit(background, (0, 0))
@@ -23,6 +31,9 @@ def main():
             if event.type == pygame.QUIT:
                 return
 
+        car.move(Direction.from_keyboard(pygame.key.get_pressed()))
+
+        all_sprites_group.draw(screen)
         pygame.display.flip()
 
 
