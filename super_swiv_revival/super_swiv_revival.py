@@ -1,7 +1,7 @@
 import pygame
 
 from enums.direction import Direction
-from player.car import Car
+from vehicule.player.car import Car
 
 FPS = 30
 SCREEN_WIDTH = 512

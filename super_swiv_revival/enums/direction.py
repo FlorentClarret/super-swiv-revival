@@ -6,7 +6,7 @@ import pygame
 @unique
 class Direction(Enum):
     NORTH = 0, (0, -1)
-    SUD = 1, (0, 1)
+    SOUTH = 1, (0, 1)
     EAST = 2, (1, 0)
     WEST = 3, (-1, 0)
     NORTH_EAST = 4, (1, -1)
@@ -37,6 +37,6 @@ class Direction(Enum):
         elif pressed[pygame.K_UP]:
             return Direction.NORTH
         elif pressed[pygame.K_DOWN]:
-            return Direction.SUD
+            return Direction.SOUTH
 
         return None
