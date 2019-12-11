@@ -3,11 +3,11 @@ import unittest
 import pygame
 
 from enums.direction import Direction
-from test.vehicle.test_vehicle import VehicleTest
+from test.vehicle.player.test_player_vehicle import PlayerVehicleTest
 from vehicule.player.car import Car
 
 
-class CarTest(VehicleTest, unittest.TestCase):
+class CarTest(PlayerVehicleTest, unittest.TestCase):
     cls = Car
 
     def test_get_sprite(self):

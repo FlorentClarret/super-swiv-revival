@@ -1,7 +1,7 @@
 from enums.direction import Direction
 
 
-class VehicleTest:
+class PlayerVehicleTest:
     cls = None
 
     def setUp(self):
@@ -122,6 +122,6 @@ class VehicleTest:
         self.assertEqual(expected.get_width(), actual.get_width())
         self.assertEqual(expected.get_height(), actual.get_height())
 
-        for i in range(expected.get_width()):
-            for j in range(expected.get_height()):
-                self.assertEqual(expected.get_at((i, j)), actual.get_at((i, j)))
+        for x in range(expected.get_width()):
+            for y in range(expected.get_height()):
+                self.assertEqual(expected.get_at((x, y)), actual.get_at((x, y)))
