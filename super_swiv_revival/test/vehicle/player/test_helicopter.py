@@ -14,4 +14,4 @@ class HelicopterTest(PlayerVehicleTest, unittest.TestCase):
         self.assertIsNone(self.instance.get_sprite(None))
 
         for direction in Direction:
-            super().compare_surface(pygame.image.load("data/sprites/car/car_front.png"), self.instance.get_sprite(direction))
+            super().compare_surface(pygame.image.load("data/sprites/helicopter/helicopter.png"), self.instance.get_sprite(direction))

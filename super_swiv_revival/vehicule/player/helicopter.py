@@ -3,7 +3,7 @@ import pygame
 from enums.direction import Direction
 from vehicule.player.player_vehicle import PlayerVehicle
 
-HELICOPTER_IMAGE = pygame.image.load("data/sprites/car/car_front.png")
+HELICOPTER_IMAGE = pygame.image.load("data/sprites/helicopter/helicopter.png")
 
 
 class Helicopter(PlayerVehicle):
