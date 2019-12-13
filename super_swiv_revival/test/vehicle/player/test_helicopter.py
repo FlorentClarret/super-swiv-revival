@@ -10,8 +10,8 @@ from vehicule.player.helicopter import Helicopter
 class HelicopterTest(PlayerVehicleTest, unittest.TestCase):
     cls = Helicopter
 
-    def test_get_sprite(self):
-        self.assertIsNone(self.instance.get_sprite(None))
+    def test_get_main_sprite(self):
+        self.assertIsNone(self.instance.get_main_sprite(None))
 
         for direction in Direction:
-            super().compare_surface(pygame.image.load("data/sprites/helicopter/helicopter.png"), self.instance.get_sprite(direction))
+            super().compare_surface(pygame.image.load("data/sprites/helicopter/helicopter.png"), self.instance.get_main_sprite(direction))

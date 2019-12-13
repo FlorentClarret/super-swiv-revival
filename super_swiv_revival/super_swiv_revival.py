@@ -21,10 +21,8 @@ def main():
 
     all_sprites_group = pygame.sprite.Group()
 
-    car = Car(SCREEN_WIDTH, SCREEN_HEIGHT)
-    helicopter = Helicopter(SCREEN_WIDTH, SCREEN_HEIGHT, 100, 100)
-    all_sprites_group.add(car)
-    all_sprites_group.add(helicopter)
+    car = Car(SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, Direction.NORTH, all_sprites_group)
+    helicopter = Helicopter(SCREEN_WIDTH, SCREEN_HEIGHT, 100, 100, Direction.NORTH, all_sprites_group)
 
     while True:
         clock.tick(FPS)
@@ -36,6 +34,7 @@ def main():
 
         car.move(Direction.from_keyboard(pygame.key.get_pressed()))
         helicopter.move(Direction.from_keyboard(pygame.key.get_pressed()))
+        helicopter.next_blade()
 
         all_sprites_group.draw(screen)
         pygame.display.flip()

@@ -14,10 +14,10 @@ CAR_IMAGES = [pygame.image.load("data/sprites/car/car_front.png"),
 
 
 class Car(PlayerVehicle):
-    def __init__(self, screen_width, screen_height, x=0, y=0, direction=Direction.NORTH):
-        super().__init__(screen_width, screen_height, x, y, direction)
+    def __init__(self, screen_width, screen_height, x=0, y=0, direction=Direction.NORTH, *groups):
+        super().__init__(screen_width, screen_height, x, y, direction, groups)
 
-    def get_sprite(self, direction):
+    def get_main_sprite(self, direction):
         if direction is None:
             return None
 

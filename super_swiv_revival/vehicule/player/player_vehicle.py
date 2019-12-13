@@ -1,10 +1,10 @@
 from abc import ABC
 
 from enums.direction import Direction
-from vehicule.vehicle import Vehicle
+from vehicule.SwivSprite import SwivSprite
 
 
-class PlayerVehicle(Vehicle, ABC):
+class PlayerVehicle(SwivSprite, ABC):
     def move(self, direction):
         if direction is None:
             return None
@@ -15,7 +15,7 @@ class PlayerVehicle(Vehicle, ABC):
         new_x = PlayerVehicle.__compute_new_position(self.rect.x, direction.vector[0], self.screen_width, self.image.get_size()[0])
         new_y = PlayerVehicle.__compute_new_position(self.rect.y, direction.vector[1], self.screen_height, self.image.get_size()[1])
 
-        super()._load_image(direction, new_x, new_y)
+        self._render_vehicle(direction, new_x, new_y)
 
     @staticmethod
     def __compute_new_position(current_value, difference, max_value, sprite_size):
