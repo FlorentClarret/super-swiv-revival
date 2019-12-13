@@ -5,8 +5,14 @@ from vehicule.player.player_vehicle import PlayerVehicle
 
 HELICOPTER_IMAGE = pygame.image.load("data/sprites/helicopter/helicopter.png")
 HELICOPTER_SHADOW_IMAGE = pygame.image.load("data/sprites/helicopter/helicopter_shadow.png")
-HELICOPTER_BLADES_IMAGES = [pygame.image.load("data/sprites/helicopter/helicopter_blade.png"),
-                            pygame.image.load("data/sprites/helicopter/helicopter_blade2.png")]
+HELICOPTER_BLADES_IMAGES = [pygame.image.load("data/sprites/helicopter/helicopter_blade0.png"),
+                            pygame.image.load("data/sprites/helicopter/helicopter_blade1.png"),
+                            pygame.image.load("data/sprites/helicopter/helicopter_blade2.png"),
+                            pygame.image.load("data/sprites/helicopter/helicopter_blade3.png"),
+                            pygame.image.load("data/sprites/helicopter/helicopter_blade4.png"),
+                            pygame.image.load("data/sprites/helicopter/helicopter_blade5.png"),
+                            pygame.image.load("data/sprites/helicopter/helicopter_blade6.png"),
+                            pygame.image.load("data/sprites/helicopter/helicopter_blade7.png")]
 
 HELICOPTER_SHADOW_GAP = (16, 32)
 HELICOPTER_BLADE_GAP = (0, -2)
