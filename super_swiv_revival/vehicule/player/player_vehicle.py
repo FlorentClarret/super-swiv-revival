@@ -1,7 +1,7 @@
 from abc import ABC
 
 from enums.direction import Direction
-from vehicule.SwivSprite import SwivSprite
+from vehicule.SwivSprite import SwivSprite, DEFAULT_SPEED
 
 
 class PlayerVehicle(SwivSprite, ABC):
@@ -19,7 +19,7 @@ class PlayerVehicle(SwivSprite, ABC):
 
     @staticmethod
     def __compute_new_position(current_value, difference, max_value, sprite_size):
-        result = current_value + 2 * difference
+        result = current_value + DEFAULT_SPEED * difference
 
         if result < 0:
             return 0
