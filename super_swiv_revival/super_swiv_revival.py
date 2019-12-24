@@ -1,6 +1,7 @@
 import pygame
 
 from enums.direction import Direction
+from vehicule.player.car import Car
 from vehicule.player.helicopter import Helicopter
 
 FPS = 30
@@ -21,11 +22,11 @@ def main():
     all_sprites_group = pygame.sprite.Group()
     all_players_group = pygame.sprite.Group()
 
-    # car = Car(SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, Direction.NORTH, all_sprites_group)
+    car = Car(SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, Direction.NORTH, all_sprites_group)
     helicopter = Helicopter(SCREEN_WIDTH, SCREEN_HEIGHT, 100, 100, Direction.NORTH, all_sprites_group)
 
-    # all_players_group.add(car, helicopter)
-    all_players_group.add(helicopter)
+    all_players_group.add(car, helicopter)
+    # all_players_group.add(car)
 
     while True:
         clock.tick(FPS)
@@ -35,7 +36,7 @@ def main():
             if event.type == pygame.QUIT:
                 return
 
-        # car.move(Direction.from_keyboard(pygame.key.get_pressed()))
+        car.move(Direction.from_keyboard(pygame.key.get_pressed()))
         helicopter.move(Direction.from_keyboard(pygame.key.get_pressed()))
         helicopter.update_sprite()
 
