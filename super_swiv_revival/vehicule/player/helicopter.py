@@ -8,7 +8,7 @@ from vehicule.player.sub_sprites.shadow import Shadow
 HELICOPTER_IMAGE = pygame.image.load("data/sprites/helicopter/helicopter.png")
 
 HELICOPTER_SHADOW_GAP = (16, 32)
-HELICOPTER_BLADE_GAP = (0, -2)
+HELICOPTER_BLADE_GAP = (-2, 0)
 
 
 class Helicopter(PlayerVehicle):
